@@ -16,9 +16,9 @@ productsController.getProducts = async(req, res) =>{
     //insert
     productsController.insertProducts = async (req, res)=>{
         //solicito los datos a guardar
-        const{name, descripiton, price, stock} = req.body;
+        const{name, description, price, stock} = req.body;
         //lleno una instancia de mi squema
-        const newProduct = new productsModel({name, descripiton,price,stock})
+        const newProduct = new productsModel({name, description , price , stock})
          //guardo en la base de datos
          await newProduct.save()
 
@@ -36,14 +36,15 @@ productsController.getProducts = async(req, res) =>{
     //ACTUALIZAR
     productsController.updateProducts = async(req, res)=>{
         //pido los nuevos datos
-        const{name, descripiton,price,stock} = req.body;
+        const{name, description,price,stock} = req.body;
         //actualizo los datos
         await productsModel.findByIdAndUpdate(req.params.id,{
             name,
-            descripiton,
+            description,
             price,
             stock,
         },{new:true} );
+
       res.json({message: "product updated"})
     }
     
