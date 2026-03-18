@@ -3,7 +3,7 @@
 const productsController ={};
 
 //importar el schema de la coleccion que vamos a utilizar
-import productsModel from "../models/products-js";
+import productsModel from "../models/products.js";
  
 //GET
 //select

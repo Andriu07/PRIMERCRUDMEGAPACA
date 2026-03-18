@@ -1,11 +1,11 @@
 import mongoose, { connect } from "mongoose";
 
-mongoose,connect("mongodb://localhost:27017/megapacaDB")
+mongoose.connect("mongodb://localhost:27017/megapacaDB")
 
 //comprobar que funcione
 const connection =mongoose.connection;
 
-connection.once("opne", ()=>{
+connection.once("open", ()=>{
     console.log("DB is connected")
 })
 

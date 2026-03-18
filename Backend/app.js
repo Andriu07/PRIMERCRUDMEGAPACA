@@ -1,5 +1,5 @@
 import express from "express";
-import productRouter from "./src/routers/products.js";
+0import productRouter from "./src/routers/products.js";
 
 //creo una constante que guarde mi libreria express
 const app = express();
