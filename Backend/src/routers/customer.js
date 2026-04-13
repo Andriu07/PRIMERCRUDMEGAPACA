@@ -7,8 +7,8 @@ const router = express.Router();
 router.route("/")
 .get(customerController.getCustomer);
 
-router.route("/id:")
-.put(customerController.putCustomer)
+router.route("/:id")
+.put(customerController.updateCustomer)
 .delete(customerController.deleteCustomer);
 
 export default router;

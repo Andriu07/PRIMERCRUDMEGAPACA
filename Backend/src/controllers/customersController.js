@@ -1,4 +1,4 @@
-import customerModel from "./models/customers.js"
+import customerModel from "../models/customers.js"
 
 
 //array de funciones
