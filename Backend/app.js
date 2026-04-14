@@ -5,6 +5,7 @@ import branchesRouters from "./src/routers/branches.js"
 import registerEmployeeRouters from "./src/routers/registerEmployee.js"
 import registerEmployeeRouters from "./src/routers/registerEmployee.js"
 import registerCustomerRouters from "./src/routers/registerCustomer.js";  
+import loginCustomerRouters from "./src/routers/loginRouter.js"
 
 //creo una constante que guarde mi libreria express
 const app = express();
@@ -19,6 +20,8 @@ app.use("/api/Employees", EmployeeRouter)
 app.use("/api/customers", customerRouters)
 app.use("/api/registerCustomer", registerCustomerRouters)
 app.use("/api/registerEmployee", registerEmployeeRouters)
+
+app.use("/api/login", loginCustomerRouters)
 
 
 export default app;

@@ -2,9 +2,7 @@ import nodemailer from "nodemailer"; //Enviar correo
 import crypto from "crypto"; //Generar codigo aleatorio
 import jsonwebtoken from "jsonwebtoken"; // Token
 import bcryptjs from "bcryptjs"; //Encriptar
- 
 import EmployeesModel from "../models/Employee.js";
- 
 import {config} from "../../config.js";
  
 //array de funciones
