@@ -3,7 +3,6 @@ import cookieParser from "cookie-parser";
 import productRouters from "./src/routers/products.js";
 import branchesRouters from "./src/routers/branches.js"
 import registerEmployeeRouters from "./src/routers/registerEmployee.js"
-import registerEmployeeRouters from "./src/routers/registerEmployee.js"
 import registerCustomerRouters from "./src/routers/registerCustomer.js";  
 import loginCustomerRouters from "./src/routers/loginRouter.js"
 
