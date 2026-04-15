@@ -123,7 +123,7 @@ registerEmployeeController.verifyCode = async (req, res) => {
     }
  
     //Si todo esta bien y el usuario escribe el codigolo registramos en la base de datos
-    const NewEmployees = new EmployeesCCModel({
+    const NewEmployees = new EmployeesModel({
       name,
       lastName,
       salary,
@@ -147,4 +147,4 @@ registerEmployeeController.verifyCode = async (req, res) => {
   }
 };
  
-export default registerEmployeesController;
+export default registerEmployeeController;

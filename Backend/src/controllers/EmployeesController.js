@@ -2,7 +2,7 @@
 const employeeController = {};
  
 //importo el Schema de la colección que voy a utilizar
-import employeesModel from "../models/Employees.js";
+import employeesModel from "../models/Employee.js";
  
 //SELECT
 employeeController.getEmployees = async (req, res) => {
