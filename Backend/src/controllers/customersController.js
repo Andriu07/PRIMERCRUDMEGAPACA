@@ -7,7 +7,7 @@ const customerController = {};
 customerController.getCustomer = async (req, res) =>{
     try{
         const customers = await customerModel.find();
-        return res.stattus(200).json(customers);
+        return res.status(200).json(customers);
     }catch(error){
         console.log("error" + error);
         return res.status(500).json({message: "Internal sever error"})
@@ -66,7 +66,7 @@ customerController.updateCustomer = async (req, res)=>{
 
     }catch(error)   {
         console.log("error" + error);
-        return res.status(500).json({message: "internal sever error"});
+        return res.status(500).json({message: "internal server error"});
     }
 };
 
@@ -75,7 +75,7 @@ customerController.deleteCustomer = async (req, res) => {
   try{
    const deleteCustomer = customerModel-findByIdAndDelete(req.params.id);
 
-   //si no se elimina es ´prque no encontro el id
+   //si no se elimina es ´porque no encontro el id
    if(!deleteCustomer){
     return res.status(404).json({message: " customer not found"});
    }

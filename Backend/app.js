@@ -8,6 +8,7 @@ import customerRouters from "./src/routers/customer.js"
 import loginCustomerRouters from "./src/routers/loginRouter.js"
 import EmployeeRouters from "./src/routers/Employee.js"
 import logoutRouters from "./src/routers/logout.js"
+import recoveryPasswordRouter from "./src/routers/recoveryPasswordRouter.js";
 import cors from "cors";
 
 //creo una constante que guarde mi libreria express
@@ -33,6 +34,8 @@ app.use("/api/registerCustomer", registerCustomerRouters)
 app.use("/api/registerEmployee", registerEmployeeRouters)
 app.use("/api/login", loginCustomerRouters)
 app.use("/api/logout", logoutRouters )
+
+app.use("/api/recoveryPassword", recoveryPasswordRouter)
 
 
 export default app;

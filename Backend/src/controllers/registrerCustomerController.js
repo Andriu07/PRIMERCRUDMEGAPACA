@@ -113,7 +113,7 @@ registerCustomerController.verifyCode = async (req, res) => {
       return res.status(400).json({message: "Invalid code"})
     }
  
-    //Si todo esta bien y el usuario escribe el codigolo registramos en la base de datos
+    //Si todo esta bien y el usuario escribe el codigo lo registramos en la base de datos
     const NewCustomer = new customerModel({
       name,
       lastName,
