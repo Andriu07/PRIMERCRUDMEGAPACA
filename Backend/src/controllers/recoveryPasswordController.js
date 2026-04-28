@@ -32,7 +32,7 @@ recoveryPasswordController.requestCode = async (req, res) =>{
             //clave secreta
             config.JWT.secret,
             //cuando expira
-            {expiresIn: "15m"}
+            {expiresIn: "15m"},
         )
         //tiempo
         res.cookie("recoveryCookie", token ,{ maxAge: 15 * 60 * 1000})
@@ -60,7 +60,7 @@ recoveryPasswordController.requestCode = async (req, res) =>{
         //enviar el correo
         transporter.sendMail(mailOptions), (error, info)=>{
             if(error){
-                console.log("error"+error)
+                console.log("error" + error)
                  return res.status(500).json({message: "Error sending email"})
             }       
         }
@@ -98,7 +98,7 @@ recoveryPasswordController.verifyCode = async (req, res) => {
             //clave secreta
             config.JWT.secret,
             //cuando expira
-            {expireIn:"15m"},
+            {expiresIn: "15m"},
         );
         res.cookie("recoveryCookie", newToken, {maxAge: 15 * 60 * 1000});
          return res.status(200).json({message: "Code verified successfuly"});
